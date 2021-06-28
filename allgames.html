@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kyte-games</title>
+  <link rel="shortcut icon" type="image/png" width="100" height="100" href="images/i_con.png">
+
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/games.css">
+  
+</head>
+<body>
+  <ul>
+  <li class="prev" onclick="history.go(-1)">
+      <span></span>
+  </li>
+  </ul>
+  <div class="star pos-star1 "></div>
+  <div class="star pos-star2 "></div>
+  <div class="star pos-star3 "></div>
+</div>
+
+    <div class="stars-container">
+  <div class="stars">
+    <div></div><div></div><div></div>
+  </div>
+  <div class="stars">
+    <div></div><div></div><div></div>
+  </div>
+  <div class="stars">
+    <div></div><div></div><div></div>
+  </div>
+  <div class="stars">
+    <div></div><div></div><div></div>
+  </div>
+  <div class="stars-2"></div>
+  <div class="stars-2"></div>
+  <div class="stars-2"></div>
+</div>
+
+<div class="moon1"></div>
+<div class="moon2"></div>
+<div class="moon3"></div>
+<div class="mn5">
+  <img src="images/jupiter.png" width="70px" height="70px">
+</div>
+
+<div class="planet-container">
+  <div class="planet-ring2"></div>
+  <div class="planet"></div>  
+  <div class="shine"></div>
+  <div class="shine-2"></div>
+  <div class="planet-ring"></div>
+  <div class="planet-crater"></div>
+</div>
+
+<div class="meteor-container">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<div class="meteor-container-2">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+  
+<div class="container">
+    <div class="box">
+      <h2 class="name">Flappy Bird</h2>
+      <a href="flappy-bird-master/index.html" class="buy">Play</a>
+      <img src="images/flappy-bird.jpg" class="product">
+    </div>
+    <div class="box">
+      <h2 class="name">Tic Tac Toe</h2>
+      <a href="tic_tac_toe/indexM.html" class="buy">Play</a>
+      <img src="images/tictactoe.jpg" class="product">
+    </div>
+    <div class="box">
+      <h2 class="name">Chess</h2>
+      <a href="3D-chess/index.html" class="buy">Play</a>
+      <img src="images/chesslogo.jpg" class="product">
+    </div>
+    <div class="box">
+      <h2 class="name">Menja</h2>
+      <a href="menja/index.html" class="buy">Play</a>
+      <img src="images/menja.png" class="product" height="300px">
+    </div>
+    <div class="box">
+      <h2 class="name">Racer Master</h2>
+      <a href="racer-master/index.html" class="buy">Play</a>
+      <img src="images/car_game.png" class="product" height="300px">
+    </div>
+    <div class="box">
+      <h2 class="name">Snake</h2>
+      <a href="glowing_snake/indexS.html" class="buy">Play</a>
+      <img src="images/snake.jpg" class="product">
+    </div>
+    <div class="box">
+      <h2 class="name">Shooting Bar</h2>
+      <a href="shooting_bar/index.html" class="buy">Play</a>
+      <img src="images/Shooting.png" class="product" height="280px">
+    </div>
+      <div class="box">
+      <h2 class="name">Tetris</h2>
+      <a href="tetris/index.html" class="buy">Play</a>
+      <img src="images/Tetris_logo.png" class="product">
+    </div>
+  </div>
+  <script src="vanilla-tilt.min.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".box"), {
+      max: 25,
+      speed: 400
+    });
+  </script>
+</body>
+</html>

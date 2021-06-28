@@ -1,0 +1,190 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="js/index.js"></script>
+    <title>Kyte</title>
+    <link rel="shortcut icon" type="image/png" width="100" height="100" href="images/i_con.png">
+  </head>
+  <body>
+    <div id="menu-bar">
+      <div id="menu" onclick="onClickMenu()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+      </div>
+      <ul class="nav" id="nav">
+        <li><a href="#" onclick="reload()"><strong>Home</a></li>
+        
+        <li><a href="allgames.html">Games</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+      </ul>
+    </div>
+
+     <div class="star pos-star1 "></div>
+  <div class="star pos-star2 "></div>
+  <div class="star pos-star3 "></div>
+</div>
+
+    <div class="stars-container">
+      <div class="stars"><div></div><div></div><div></div>
+      </div>
+      <div class="stars"><div></div><div></div><div></div>
+      </div>
+      <div class="stars"><div></div><div></div><div></div>
+      </div>
+      <div class="stars"><div></div><div></div><div></div>
+      </div>
+      <div class="stars"><div></div><div></div><div></div>
+      </div>
+      <div class="stars"><div></div><div></div><div></div>
+      </div>
+      <div class="stars"><div></div><div></div><div></div>
+      </div>
+      <div class="stars"><div></div><div></div><div></div>
+      </div>
+      <div class="stars"><div></div><div></div><div></div>
+      </div>
+      <div class="stars"><div></div><div></div><div></div>
+  </div>
+    <div class="night">
+      <div class="star1"></div>
+      <div class="star1"></div>
+      <div class="star1"></div>
+      
+    </div>
+</div>
+
+      <div class="menu-bg" id="menu-bg"></div>
+        <div id="wrapper">
+  <section class="banner">
+    <div class="container">
+      <div id="scene">
+        <h2 data-depth="0.2" id="tags">K</h2>
+        <h2 data-depth="-0.2" id="tags">Y</h2>
+        <h2 data-depth="0.3"id="tags">T</h2>
+        <h2 data-depth="-0.3"id="tags">E</h2>
+        <div class="layer layer1 zIndexAbove" data-depth="0.5"><img src="images/no4.png" width="100px"></div>
+        <div class="layer layer2 zIndexAbove" data-depth="0.75"><img src="images/no3.png" width="80px"></div>
+        <div class="layer layer3 zIndexAbove" data-depth="1"><img src="images/no5.png" width="100px"></div>
+        <div class="layer layer4" data-depth="-0.25"><img src="images/earth1.png"></div>
+        <div class="layer layer5" data-depth="-0.5"><img src="images/jupiter.png"></div>
+        <div class="layer layer6" data-depth="-0.375"><img src="images/mercury.png"></div>
+        <div class="layer layer7 zIndexAbove" data-depth="0.5" ><img src="images/venus.png" width="90px"></div>
+      </div>
+    </div>
+  </section>
+    
+
+      <div class="meteor-container-2">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+
+  <form onsubmit="submitFn(this, event);">
+    <div class="search-wrapper">
+        <div class="input-holder">
+            <input type="text" id="search" class="search-input" placeholder="Type to search"/>
+            <button class="search-icon" onclick="searchToggle(this, event);"><span onclick="openPage()"></span></button>
+        </div>
+        <span class="close" onclick="searchToggle(this, event);"></span>
+        <div class="result-container">
+
+        </div>
+    </div>
+</form>
+  <div class="sec">
+    <img src="images/landscape.png" width="740px">
+</div>
+
+
+
+
+  <div id="particles-js"></div>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script>
+    var text = document.getElementById('tags');
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(text);
+    var parallaxInstance = new Parallax(scene);
+    function onClickMenu(){
+      document.getElementById("menu").classList.toggle("change");
+      document.getElementById("nav").classList.toggle("change");
+      document.getElementById("menu-bg").classList.toggle("change-bg");
+    }
+
+    function reload(){
+      location.reload();
+      return false;
+    }
+
+    
+    function searchToggle(obj, evt){
+    var container = $(obj).closest('.search-wrapper');
+        if(!container.hasClass('active')){
+            container.addClass('active');
+            evt.preventDefault();
+        }
+        else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+            container.removeClass('active');
+            container.find('.search-input').val('');
+        }
+  }
+
+  function openPage(){
+        var x =document.getElementById("search").value;
+        if(x=="Tetris"||x=="tetris"){
+           window.open("tetris/index.html", '_self');
+        }
+        else if(x=="Chess"||x=="chess"){
+          window.open("3D-chess/index.html", '_self');
+        }
+        else if(x=="Snake"||x=="snake"){
+          window.open("glowing_snake/indexS.html", '_self');
+        }
+        else if(x=="ShootingBar"||x=="shooting bar"){
+          window.open("shooting_bar/index.html", '_self');
+        }
+        else if(x=="shootingbar"||x=="Shooting Bar"){
+          window.open("shooting_bar/index.html", '_self');
+        }
+        else if(x=="Shooting"||x=="shooting"){
+          window.open("shooting_bar/index.html", '_self');
+        }
+        else if(x=="Menja"||x=="menja"){
+          window.open("menja/index.html", '_self');
+        }
+        else if(x=="Flappybird"||x=="flappybird"){
+          window.open("flappy-bird-master/index.html", '_self');
+        }
+        else if(x=="Flappy bird"||x=="Flappy Bird"){
+          window.open("flappy-bird-master/index.html", '_self');
+        }
+        else if(x=="flappy bird"||x=="Flappy bird"){
+          window.open("flappy-bird-master/index.html", '_self');
+        }
+        else if(x=="Tictactoe"||x=="tictactoe"){
+          window.open("tic_tac_toe/indexM.html", '_self');
+        }
+        else if(x=="Tic tac toe"||x=="tic tac toe"){
+          window.open("tic_tac_toe/indexM.html", '_self');
+        }
+        else if(x=="racermaster"||x=="Racermaster"){
+          window.open("Racer-master/index.html", '_self');
+        }
+        else if(x=="racer master"||x=="Racer master"){
+          window.open("Racer-master/index.html", '_self');
+        }
+      }
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </body>
+</html>
